@@ -58,7 +58,7 @@ ul.carousel-inner {
   width: 70px;
   height: 70px;
   border:2px solid green;
-  position: absolute;
+  /* position: absolute; */
   /* margin-left: 10px; */
 }
 .passive{

@@ -1,8 +1,15 @@
-
-<ng-container *ngFor="let item of slideConfigs">
-  <div class="item level{{item.level}}" #someName [ngStyle]="slideStates[item.index]" @animation>{{items[item.index]}}</div>
+<section class="carousel-wrapper" [ngStyle]="carouselWrapperStyle">
+  <ul class="carousel-inner" #carousel>
+    <li *ngFor="let item of items" class="carousel-item item">
+      <ng-container [ngTemplateOutlet]="item.tpl"></ng-container>
+    </li>
+  </ul>
+</section>active=>{{active}}
+<ng-container *ngIf="showControls">
+  <button  class="carousel__prev-button" (click)="prev()">
+    <i>chevron_left</i>
+  </button>
+  <button  class="carousel__next-button" (click)="next()">
+    <i>chevron_right</i>
+  </button>
 </ng-container>
-<div>
-<button class="prev" (click)="prev()">Prev</button>
-<button class="next">Next</button>
-</div>
