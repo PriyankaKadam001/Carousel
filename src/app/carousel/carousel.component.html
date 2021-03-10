@@ -1,0 +1,8 @@
+
+<ng-container *ngFor="let item of slideConfigs">
+  <div class="item level{{item.level}}" #someName [ngStyle]="slideStates[item.index]" @animation>{{items[item.index]}}</div>
+</ng-container>
+<div>
+<button class="prev" (click)="prev()">Prev</button>
+<button class="next">Next</button>
+</div>
